@@ -4,12 +4,10 @@ class Note() {
     fun addNote(input: String) {
         notes.add(input)
     }
-    fun getListOfNotes(): MutableList<String> {
-        return notes
-    }
-    fun displayNote(){
+
+    fun displayNote() {
         println("Текущие заметки: ")
-        if(notes.isEmpty()){
+        if (notes.isEmpty()) {
             println("Заметки в архиве не найдены")
         } else {
             notes.forEachIndexed { index, note ->
