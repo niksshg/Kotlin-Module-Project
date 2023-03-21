@@ -1,12 +1,12 @@
-object Archive {
+class Archive {
     val archive: MutableMap<String, Note> = mutableMapOf()
 
     fun addArchive(input: String) {
-        archive.put(input, Note())
+        archive[input] = Note()
     }
 
     fun getAllArchives(): List<String> {
-        var listOfArchives = archive.keys.toList().toMutableList()
+        val listOfArchives = archive.keys.toMutableList()
         listOfArchives.add("Выход")
         return listOfArchives
     }

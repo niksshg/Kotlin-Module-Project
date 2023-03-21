@@ -14,7 +14,7 @@ class Menu(val menuOptions: List<String>) {
 
     fun selectMenuOption(): Int? {
         val input = readLine()
-        return try {
+        try {
             val selectedOption = input?.toInt()
             if (selectedOption in 0..menuOptions.lastIndex) {
                 return selectedOption
